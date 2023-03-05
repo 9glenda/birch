@@ -77,7 +77,7 @@ status() {
 connect() {
     # Open an input/output network socket to the IRC server
     # using the file descriptor '9'.
-    exec 9<>"/dev/tcp/${s:=irc.freenode.net}/${P:-6667}" ||
+    exec 9<>"/dev/tcp/${s:=irc.libera.chat}/${P:-6667}" ||
         exit 1
 
     printf 'NICK %s\nUSER %s - - :%s\nPASS %s\n' \
